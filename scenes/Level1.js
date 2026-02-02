@@ -1,7 +1,14 @@
 import LevelBase from "./LevelBase.js";
-export default class Level1 extends LevelBase {
+export default class Level1 extends Phaser.Scene {
   constructor() {
-    super("Level1","When did our story truly begin?","10th march");
-    this.nextScene="Level2";
+    super("Level1"); // 👈 THIS NAME IS CRITICAL
+  }
+
+  preload() {
+    // load girl, hearts, etc.
+  }
+
+  create() {
+    // girl appears, hearts appear
   }
 }
