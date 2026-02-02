@@ -3,7 +3,7 @@ import Level2 from "./scenes/Level2.js";
 import Level3 from "./scenes/Level3.js";
 import FinalCinematic from "./scenes/FinalCinematic.js";
 
-const config = {
+new Phaser.Game({
   type: Phaser.AUTO,
   width: 960,
   height: 540,
@@ -15,11 +15,8 @@ const config = {
       debug: false
     }
   },
+
+  // 🐴 IMPORTANT:
+  // FIRST scene = gameplay scene
   scene: [Level1, Level2, Level3, FinalCinematic]
-};
-
-// 🐴 Create the game
-const game = new Phaser.Game(config);
-
-// 🐴 FORCE Phaser to start the gameplay scene
-game.scene.start("Level1");
+});
